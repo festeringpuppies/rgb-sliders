@@ -1,0 +1,13 @@
+.editorconfig
+
+# Godot 4+ specific ignores
+.godot/
+.nomedia
+
+# Godot-specific ignores
+.import/
+export.cfg
+export_credentials.cfg
+
+.vscode/
+*.*.import

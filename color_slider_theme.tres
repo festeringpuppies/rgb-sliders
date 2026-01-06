@@ -1,0 +1,19 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://d00ql30k7rg35"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_37dob"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r0w5s"]
+
+[sub_resource type="Gradient" id="Gradient_r6v8o"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_mamgv"]
+gradient = SubResource("Gradient_r6v8o")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ygdqh"]
+texture = SubResource("GradientTexture1D_mamgv")
+texture_margin_bottom = 7.0
+
+[resource]
+HSlider/styles/grabber_area = SubResource("StyleBoxEmpty_37dob")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxEmpty_r0w5s")
+HSlider/styles/slider = SubResource("StyleBoxTexture_ygdqh")

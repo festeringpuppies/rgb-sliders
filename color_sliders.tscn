@@ -1,0 +1,87 @@
+[gd_scene load_steps=5 format=3 uid="uid://cop05qagvn1ij"]
+
+[ext_resource type="StyleBox" uid="uid://dv2r3y0rrxee8" path="res://slider_panel_normal.tres" id="1_1fn7q"]
+[ext_resource type="Script" uid="uid://csj2gdshiiflo" path="res://color_sliders.gd" id="1_1mk3y"]
+[ext_resource type="Script" uid="uid://brujh70v34mhm" path="res://slider_deluxe.gd" id="2_1mk3y"]
+[ext_resource type="Theme" uid="uid://d00ql30k7rg35" path="res://color_slider_theme.tres" id="4_hjfhi"]
+
+[node name="colorsliders" type="VBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+offset_right = 200.0
+offset_bottom = 153.0
+theme_override_constants/separation = 15
+script = ExtResource("1_1mk3y")
+
+[node name="red_container" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="red_deluxe" type="PanelContainer" parent="red_container" node_paths=PackedStringArray("the_slider")]
+layout_mode = 2
+focus_mode = 2
+theme_override_styles/panel = ExtResource("1_1fn7q")
+script = ExtResource("2_1mk3y")
+the_slider = NodePath("red_slider")
+
+[node name="red_slider" type="HSlider" parent="red_container/red_deluxe"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(207, 20)
+layout_mode = 2
+mouse_filter = 1
+theme = ExtResource("4_hjfhi")
+max_value = 255.0
+editable = false
+
+[node name="Label" type="Label" parent="red_container"]
+layout_mode = 2
+text = "Red"
+
+[node name="green_container" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="green_deluxe" type="PanelContainer" parent="green_container" node_paths=PackedStringArray("the_slider")]
+layout_mode = 2
+focus_mode = 2
+theme_override_styles/panel = ExtResource("1_1fn7q")
+script = ExtResource("2_1mk3y")
+the_slider = NodePath("green_slider")
+
+[node name="green_slider" type="HSlider" parent="green_container/green_deluxe"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(207, 20)
+layout_mode = 2
+mouse_filter = 1
+theme = ExtResource("4_hjfhi")
+max_value = 255.0
+editable = false
+
+[node name="Label" type="Label" parent="green_container"]
+layout_mode = 2
+text = "Green"
+
+[node name="blue_container" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="blue_deluxe" type="PanelContainer" parent="blue_container" node_paths=PackedStringArray("the_slider")]
+layout_mode = 2
+focus_mode = 2
+theme_override_styles/panel = ExtResource("1_1fn7q")
+script = ExtResource("2_1mk3y")
+the_slider = NodePath("blue_slider")
+
+[node name="blue_slider" type="HSlider" parent="blue_container/blue_deluxe"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(207, 20)
+layout_mode = 2
+mouse_filter = 1
+theme = ExtResource("4_hjfhi")
+max_value = 255.0
+editable = false
+
+[node name="Label" type="Label" parent="blue_container"]
+layout_mode = 2
+text = "Blue"
